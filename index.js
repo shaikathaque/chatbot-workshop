@@ -39,7 +39,7 @@ app.post('/weather', (request, response) => {
       // round to 2 decimal places
       temperature = Math.round(temperature * 100) / 100;
 
-      dialogflowResponse.fulfillmentText = `The temperature for ${cityName} is ${temerature} degrees`;
+      dialogflowResponse.fulfillmentText = `The temperature for ${cityName} is ${temperature} degrees`;
       response.json(dialogflowResponse);
     })
     .catch(err => {
